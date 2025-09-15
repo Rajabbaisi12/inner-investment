@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Diagnostic Service Section */
+.diagnostic-service {
+    padding: 40px 0;
+    background-color: white;
+}
+
+/* engine Service Section */
+.engine-servicing {
+    padding: 40px 0;
+    background-color: white;
+}
+
+/* tire-replacement Section */
+.tire-replacement {
+    padding: 40px 0;
+    background-color: white;
+}
+
+/* oil-change Section */
+.oil-change {
+    padding: 40px 0;
+    background-color: white;
+}
+
+
+.containers {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #003366;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.service-details ul, .benefits ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.service-details ul li, .benefits ul li {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-details ul li strong, .benefits ul li strong {
+    color: #003366;
+}
+
+h3 {
+    color: #003366;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+

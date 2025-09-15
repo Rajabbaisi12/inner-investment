@@ -1,0 +1,42 @@
+
+
+
+:root {
+    --primary: #D81324;
+    --secondary: #0B2154;
+    --light: #F2F2F2;
+    --dark: #111111;
+}
+
+.containers {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #003366;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+
+
+p {
+    margin: 15px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: disc inside;
+    margin: 10px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
