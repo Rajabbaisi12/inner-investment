@@ -104,6 +104,29 @@
                 items:3
             }
         }
+
+     // Disable right-click
+     document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // Disable key combinations
+    document.addEventListener('keydown', function (event) {
+    // Block F12
+    if (event.key === "F12" || event.keyCode === 123) {
+        event.preventDefault();
+       }
+    
+    // Block Ctrl+Shift+I or Ctrl+Shift+J (DevTools)
+    if (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) {
+        event.preventDefault();
+        }
+    
+    // Block Ctrl+U (View Source)
+    if (event.ctrlKey && event.key.toLowerCase() === "u") {
+        event.preventDefault();
+        }
+
+
+        
     });
     
 })(jQuery);
