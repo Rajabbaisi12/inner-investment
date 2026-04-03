@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -281,6 +281,83 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+    <!-- Contact Form Script -->
+    <script>
+        // =============================================
+        // STEP 1: Initialize EmailJS with your Public Key
+        // Sign up free at https://www.emailjs.com
+        // Replace "YOUR_PUBLIC_KEY" with your actual key
+        // =============================================
+        emailjs.init("UyytOvi68nbhdfon5");
+ 
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+ 
+            const form = this;
+            const btn = document.getElementById("sendBtn");
+            const statusBox = document.getElementById("form-status");
+ 
+            // Bootstrap validation
+            if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+                return;
+            }
+ 
+            // Show loading state
+            btn.classList.add("loading");
+            btn.disabled = true;
+            statusBox.className = "";
+            statusBox.style.display = "none";
+            statusBox.textContent = "";
+ 
+            // =============================================
+            // STEP 2: Replace these with YOUR EmailJS IDs
+            // - Service ID:  found in EmailJS → Email Services
+            // - Template ID: found in EmailJS → Email Templates
+            // =============================================
+            const SERVICE_ID  = "service_97vin0j";
+            const TEMPLATE_ID = "template_syo5g6e";
+ 
+            // Template parameters — must match your EmailJS template variables
+            const templateParams = {
+                from_name: document.getElementById("name").value.trim(),
+                reply_to:  document.getElementById("email").value.trim(),
+                subject:   document.getElementById("subject").value.trim(),
+                message:   document.getElementById("message").value.trim(),
+                to_email:  "info@innerinvestments.com"   // destination inbox
+            };
+ 
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+                .then(function () {
+                    statusBox.textContent = "✅ Message sent! We'll get back to you shortly.";
+                    statusBox.className = "success";
+                    form.reset();
+                    form.classList.remove("was-validated");
+                })
+                .catch(function (err) {
+                    console.error("EmailJS error:", err);
+                    statusBox.textContent = "❌ Something went wrong. Please try again or call us directly.";
+                    statusBox.className = "error";
+                })
+                .finally(function () {
+                    btn.classList.remove("loading");
+                    btn.disabled = false;
+                });
+        });
+    </script>
+
+
+
+    
 </body>
 
 </html>
+
+
+
+
+
+
+
