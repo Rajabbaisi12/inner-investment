@@ -26,6 +26,9 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+    <!--js script-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -162,7 +165,7 @@
                 <div class="col-md-6">
                     <div class="wow fadeInUp" data-wow-delay="0.2s">
                        <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://freewebsitecode.com/contact-form">Download Now</a>.</p>-->
-                        <form>
+                        <form id="contactForm" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -188,8 +191,13 @@
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
+
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                     <div id="form-status" style="display:none; padding: 10px; border-radius: 5px;"></div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit" id="sendBtn">Send Message</button>
                                 </div>
                             </div>
                         </form>
